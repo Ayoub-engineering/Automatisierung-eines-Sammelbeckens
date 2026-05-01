@@ -10,16 +10,16 @@ Dieses Projekt wurde im Rahmen eines Hochschulprojekts im Team (2 Personen) entw
 * Umsetzung der Steuerung für Füll- und Entleerprozesse
 * Implementierung der Motorsteuerung (Stern-Dreieck)
 * Erstellung der HMI-Visualisierung
-* **Elektroplanung und Schaltplanerstellung mit EPLAN Electric P8**
+* Elektroplanung und Schaltplanerstellung mit EPLAN Electric P8
 * Analyse und Test des Systems unter realitätsnahen Bedingungen
 
 ---
 
-### Systembeschreibung
+### Systemübersicht
 
 Das System steuert ein Sammelbecken mithilfe von Sensoren zur Füllstandserkennung sowie Ventilen und einem Motor zur Regelung des Wasserflusses.
 
-Die Steuerung umfasst:
+Funktionen:
 
 * Automatisches Befüllen und Entleeren
 * Zustandsüberwachung über HMI
@@ -28,21 +28,37 @@ Die Steuerung umfasst:
 
 ---
 
-### Technologien
+### EPLAN – Leistungsteil
 
-* Siemens TIA Portal (S7, SCL)
-* HMI (Siemens Panel)
-* EPLAN Electric P8
+![Leistungsteil](image/eplan_power.png)
+
+Darstellung des Leistungsstromkreises inklusive Motoransteuerung und Schutzkomponenten.
+
+---
+
+### EPLAN – Steuerung & HMI
+
+![Steuerung](image/eplan_control.png)
+
+Integration von SPS (Siemens S7-1200), HMI und Ein-/Ausgangssignalen.
+
+---
+
+### Schaltschrankaufbau
+
+![Schaltschrank](image/cabinet_layout.png)
+
+Mechanischer Aufbau und Anordnung der Komponenten im Schaltschrank.
 
 ---
 
 ### HMI Visualisierung
 
-**Simulation (TIA Portal):**
+Simulation (TIA Portal):
 
 ![HMI Simulation](image/hmi_simulation_1.jpg)
 
-**Reales System (Siemens HMI):**
+Reales System:
 
 ![HMI Real](image/hmi_real_1.png)
 ![HMI Real](image/hmi_real_2.png)
@@ -51,28 +67,41 @@ Die Steuerung umfasst:
 
 ### Code (Auszug)
 
-![Code Main OB](image/code_1_Main_OB.png)
+![Main OB](image/code_1_Main_OB.png)
 
-Hauptprogramm (OB) zur Ablaufsteuerung des Systems.
+Ablaufsteuerung des Systems im Hauptprogramm.
 
-![Code Stern-Dreieck](image/code_2_Stern_Dreieck_Umschaltung.png)
+![Stern-Dreieck](image/code_2_Stern_Dreieck_Umschaltung.png)
 
-Umsetzung der Motorsteuerung mit Stern-Dreieck-Umschaltung.
+Motorsteuerung mit Stern-Dreieck-Umschaltung.
 
 ---
 
 ### Dokumentation
 
-* [EPLAN Schaltplan](docs/EPLAN%20Schaltplan.pdf)
-  Vollständiger elektrischer Schaltplan des Systems inklusive Verdrahtung und Komponenten.
+#### EPLAN Schaltplan
+
 [PDF öffnen](docs/EPLAN%20Schaltplan.pdf)
 
-![Vorschau Schaltplan](image/eplan_preview.png)
-* [Stückliste (BOM)](docs/bill_of_materials.pdf)
-  Übersicht aller verwendeten Bauteile und Komponenten.
+Übersicht über den vollständigen elektrischen Aufbau und die Verdrahtung.
 
-* [Produktionskosten](docs/Produktionskosten.pdf)
-  Kalkulation der Material- und Herstellungskosten.
+---
+
+#### Stückliste (BOM)
+
+[PDF öffnen](docs/bill_of_materials.pdf)
+
+Alle verwendeten Komponenten und Materialien im System.
+
+---
+
+#### Produktionskosten
+
+[PDF öffnen](docs/Produktionskosten.pdf)
+
+![Kosten Vorschau](image/cost_preview.png)
+
+Kalkulation der Material- und Herstellungskosten.
 
 ---
 
